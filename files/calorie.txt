@@ -1,0 +1,257 @@
+Build a single-user calories and macros tracker web app using React / Next.js.
+No backend. No authentication.
+All user data must be stored in browser localStorage.
+Nutrition data should be fetched from a free food nutrition API.
+
+Core Requirements
+1. App Purpose
+
+Track daily:
+
+Calories
+
+Protein
+
+Carbs
+
+Fat
+
+Support Indian food by allowing:
+
+API-based food search
+
+Manual custom food entries
+
+2. Tech Constraints
+
+Frontend only (React or Next.js)
+
+No backend, no database
+
+Use localStorage for:
+
+Daily food logs
+
+Custom foods
+
+User calorie & protein goals
+
+Use a public nutrition API (example: CalorieNinjas or Nutritionix)
+
+API key should be stored in environment variables
+
+UI Pages / Sections
+3. Main Dashboard (Home)
+
+Show:
+
+Selected date (default: today)
+
+Total calories consumed
+
+Total protein, carbs, fats
+
+Daily calorie goal
+
+Remaining calories
+
+Remaining protein
+
+Include:
+
+Progress bar for calories
+
+Progress bar for protein
+
+Color logic:
+
+Green = within target
+
+Yellow = close to limit
+
+Red = exceeded
+
+4. Meal Sections
+
+Meals:
+
+Breakfast
+
+Lunch
+
+Dinner
+
+Snacks
+
+Each meal should:
+
+Show foods added
+
+Show total calories per meal
+
+Allow deleting individual food items
+
+Food Logging
+5. Add Food Flow
+
+User flow:
+
+Select meal
+
+Search food using API OR add custom food
+
+Enter quantity
+
+Save food
+
+6. API Food Search
+
+Search food by text (example: “banana”, “rice”, “boiled egg”)
+
+Display:
+
+Calories per serving
+
+Protein, carbs, fat
+
+Allow user to select item and quantity
+
+Scale nutrition values based on quantity
+
+7. Custom Food Entry (Important)
+
+Allow user to add custom foods manually with:
+
+Food name
+
+Calories per unit
+
+Protein per unit
+
+Carbs per unit
+
+Fat per unit
+
+Unit label (roti, bowl, cup, piece)
+
+Custom foods must:
+
+Be saved in localStorage
+
+Be reusable in future searches
+
+Portion Handling
+8. Quantity Support
+
+Allow decimal quantities (0.5, 1.5, 2)
+
+Automatically calculate scaled macros
+
+Example:
+
+1 roti = 120 kcal
+
+2 rotis = 240 kcal
+
+Date-Based Tracking
+9. Date Selector
+
+User can switch dates
+
+Each date has its own food log
+
+Data structure in localStorage should be date-keyed
+
+Example:
+
+{
+  "2026-02-03": {
+    "breakfast": [],
+    "lunch": [],
+    "dinner": [],
+    "snacks": []
+  }
+}
+
+Local Storage Management
+10. localStorage Data
+
+Store:
+
+Daily logs
+
+Custom food list
+
+User settings (calorie goal, protein goal)
+
+Persist data across refresh and browser restarts.
+
+Settings
+11. Settings Panel
+
+Allow user to set:
+
+Daily calorie target
+
+Daily protein target
+
+Default units
+
+Reset all data option
+
+Store settings in localStorage.
+
+UX Rules
+12. Speed & Simplicity
+
+Food should be addable in under 10 seconds
+
+Minimal clicks
+
+Keyboard friendly
+
+Mobile responsive
+
+Error Handling
+13. API Errors
+
+Gracefully handle API failure
+
+Show message like:
+
+“API unavailable. Add food manually.”
+
+Optional Enhancements (Only if time permits)
+
+Recent foods list
+
+Favorite foods
+
+Weekly average calories view
+
+Dark mode toggle
+
+Design Guidelines
+
+Clean, minimal UI
+
+Focus on readability
+
+No clutter
+
+Use cards for meals
+
+Sticky “Add Food” button
+
+Output Expectation
+
+Fully working frontend app
+
+Clean component structure
+
+Clear comments in code
+
+No backend code
+
+No authentication
+
